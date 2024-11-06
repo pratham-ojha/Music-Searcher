@@ -1,0 +1,204 @@
+/* default reset */
+*{
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* body */
+body{
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+}
+/* search section */
+#search-section{
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    border-bottom:2px solid black;   
+}
+/* website heading */
+h1{
+    font-size:100px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-style:italic;
+    margin-bottom:40px;
+}
+span{
+    font-size:80px;
+    font-family: 'Montserrat', sans-serif;
+    font-style:normal;
+}
+
+/* input form */
+#searchForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:30px;
+}
+
+/* input bar */
+textarea:focus, input:focus{
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+}
+#searchInput{
+    width:120vh;
+    height:40px;
+    border:transparent;
+    border-radius:10px;
+    font-size:20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight:800;
+    text-align:center;
+}
+::placeholder{
+    font-size: 20px;
+    text-align:center;
+    border:none;
+    font-weight:200
+}
+.music-offset{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:30px;
+}
+.search-offset{
+    width:80px;
+    border-radius:10px;
+    border:none;
+    text-align: center;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+
+   opacity: 1;
+
+}
+#result-offset-header{
+    font-size:35px;
+    font-family: 'IBM Plex Sans', sans-serif;}
+label{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size:25px;
+    font-weight: 800;
+    padding-right:10px;
+}
+#submitButton{
+    border-radius:10px;
+    border:none;
+    font-size:15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight:800;
+    padding: 5px 20px;
+}
+
+/* input box animation*/
+.block {
+	position: relative;
+    border-radius: 10px;
+	width:120vh;
+    height:40px;
+	background: linear-gradient(0deg, #000, #272727);
+}
+
+.block:before, .block:after {
+	content: '';
+	position: absolute;
+	left: -2px;
+	top: -2px;
+	background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+		#0000ff, #00ff00,#ffff00, #ff0000);
+	background-size: 400%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	z-index: -1;
+	animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.block:after {
+	filter: blur(50px);
+}
+
+/* results page*/
+#results-section{
+    min-height:100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center; 
+}
+h2{
+    margin-top:30px;
+    margin-bottom:20px;
+    font-size:60px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+#panels{
+    display:flex;
+    justify-content: space-evenly;
+}
+#ytlogo{
+    height:70px;
+    width:70px;
+}
+#spotifylogo{
+    margin-top:8px;
+    height:60px;
+    width:60px;
+}
+#soundcloudlogo{
+    height:80px;
+    width:80px;
+}
+#youtube-panel,#spotify-panel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:30px;
+    width:400px;
+}
+#soundcloud-panel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+    width:400px;
+}
+.songs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#ytresults{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+}
+#spotifyresults{
+    display: flex;
+    flex-direction: column;
+}
+#soundcloudresults{
+    display: flex;
+    flex-direction: column;
+    gap:13px;
+}
